@@ -1,0 +1,15 @@
+<launch>
+  <node pkg="ml" type="ml" name="ml" output="screen">
+
+        <param name="ip_address_device" value="192.168.1.10" type="string"/>
+        <param name="ip_port_device"    value="2000"         type="int"/>
+
+        <param name="ip_address_pc"     value="0.0.0.0"      type="string"/>
+        <param name="ip_port_pc"        value="0"         type="int"/>
+
+  </node>
+
+  <!-- Visualisation RVIZ --> 
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find ml)/rviz/demo.rviz"/>
+
+</launch>
